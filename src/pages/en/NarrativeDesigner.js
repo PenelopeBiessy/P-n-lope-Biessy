@@ -2,9 +2,11 @@ import React from 'react';
 
 export default function NarrativeDesignerEN() {
   return (
-    <div className="relative w-full h-screen bg-cover bg-center" style={{ backgroundImage: "url('/noce5.png')" }}>
+    <div
+      className="relative w-full h-screen bg-cover bg-center"
+      style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/noce5.png)` }}
+    >
       <div className="p-10 bg-black bg-opacity-60 text-white">
-
         <br />
         <br />
 

@@ -2,7 +2,10 @@ import React from 'react';
 
 export default function RehearsalDirector() {
   return (
-    <div className="relative w-full h-screen bg-cover bg-center" style={{ backgroundImage: "url('/scenesdechasse.jpg')" }}>
+    <div
+      className="relative w-full h-screen bg-cover bg-center"
+      style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/scenesdechasse.jpg)` }}
+    >
       <div className="p-10 text-white bg-transparent">
         <p>The artists I support in memorization and performance :</p>
 

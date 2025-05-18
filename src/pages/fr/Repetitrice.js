@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Repetitrice() {
   return (
-    <div className="relative w-full h-screen bg-cover bg-center" style={{ backgroundImage: "url('/scenesdechasse.jpg')" }}>
+    <div className="relative w-full h-screen bg-cover bg-center" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/scenesdechasse.jpg)` }}>
       <div className="p-10 text-white bg-transparent">
         <p>Les artistes que j'accompagne dans la mémorisation et la mise en jeu :</p>
 
