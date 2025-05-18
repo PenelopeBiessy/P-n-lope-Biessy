@@ -1,13 +1,132 @@
-body {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Intégration de la police EB Garamond depuis Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap');
+
+/* Réinitialisation de base */
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Utilisation de la police EB Garamond */
+body, html, .App, .App-header, .App-logo, header, nav, div {
+  background-color: black;
+  color: white;
+  font-family: 'EB Garamond', serif;
+  font-size: 18px; /* Augmente la taille par défaut */
+}
+
+/* Burger Menu */
+.burger-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  background-color: black;
+  color: white;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 50;
+}
+
+.burger-menu.open {
+  transform: translateX(0);
+}
+
+/* Overlay to cover content */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 40;
+}
+
+/* Adjust the main content to go behind */
+.main-content {
+  z-index: 1;
+}
+
+/* En-tête */
+.App-header {
+  background-color: black;
+  box-shadow: none;
+}
+
+/* Liens de navigation */
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 20px; /* Taille des liens de navigation augmentée */
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Style du titre principal */
+.site-title {
+  font-size: 2.5rem; /* Augmentation de la taille du titre */
+  font-weight: bold;
+  color: white;
+  margin-left: 1rem;
+}
+
+h1, h2, h3 {
+  font-size: 2rem; /* Augmentation des titres */
+}
+
+/* Conteneur principal */
+.main-container {
+  padding: 20px;
+}
+
+/* Typographie */
+p {
+  font-size: 1.2rem; /* Taille du texte augmentée */
+  line-height: 1.7;  /* Espacement des lignes amélioré */
+}
+
+/* Liste des projets */
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+li {
+  margin: 8px 0; /* Espacement entre les éléments de liste augmenté */
+}
+
+/* Pour le fond d'image */
+.background-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Responsiveness */
+@media (max-width: 920px) {
+  .md\\:hidden {
+    display: none;
+  }
+  .md\\:flex {
+    display: flex;
+  }
+}
+
+@media (min-width: 921px) {
+  .md\\:hidden {
+    display: block;
+  }
+  .md\\:flex {
+    display: none;
+  }
 }
