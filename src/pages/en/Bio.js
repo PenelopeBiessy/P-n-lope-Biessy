@@ -5,10 +5,10 @@ export default function Bio() {
     <div className="p-10 text-white flex flex-col items-center">
       {/* Centered photo */}
       <img 
-  src={`${process.env.PUBLIC_URL}/Penelope-Biessy/portrait.jpg`} 
-  alt="Pénélope Biessy" 
-  className="w-60 h-60 rounded-full mb-5 object-cover"
-/>
+        src={`${process.env.PUBLIC_URL}/portrait.jpg`} 
+        alt="Pénélope Biessy" 
+        className="w-60 h-60 rounded-full mb-5 object-cover"
+      />
       
       {/* Text below the photo */}
       <div className="text-center max-w-2xl">

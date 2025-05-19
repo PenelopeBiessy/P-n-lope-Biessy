@@ -39,7 +39,7 @@ export default function Home() {
   return (
     <div
       className="relative w-full h-screen bg-cover bg-center"
-      style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/Penelope-Biessy/noce6.png)` }}
+      style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/noce6.png)` }}
     >
       <div className="p-10 bg-transparent text-white">
         <p className="text-xl font-light">

@@ -104,7 +104,7 @@ function AppContent() {
 
 function App() {
   return (
-    <Router>
+    <Router basename="/Penelope-Biessy">
       <AppContent />
     </Router>
   );
