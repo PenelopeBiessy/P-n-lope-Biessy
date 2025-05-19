@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { HashRouter as Router, Route, Routes, Link, useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link, useNavigate } from 'react-router-dom';
 
 import HomeFR from './pages/fr/Home';
 import NarrativeDesignerFR from './pages/fr/NarrativeDesigner';
@@ -61,7 +61,7 @@ function AppContent() {
 
 function App() {
   return (
-    <Router basename="/Penelope-Biessy">
+    <Router basename={process.env.PUBLIC_URL}>
       <AppContent />
     </Router>
   );
