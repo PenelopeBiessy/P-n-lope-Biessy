@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Penelope-Biessy/static/css/main.2c307d97.css",
-    "main.js": "/Penelope-Biessy/static/js/main.1eccab69.js",
+    "main.js": "/Penelope-Biessy/static/js/main.e9d0f4e7.js",
     "static/js/453.8e0a7787.chunk.js": "/Penelope-Biessy/static/js/453.8e0a7787.chunk.js",
     "index.html": "/Penelope-Biessy/index.html",
     "main.2c307d97.css.map": "/Penelope-Biessy/static/css/main.2c307d97.css.map",
-    "main.1eccab69.js.map": "/Penelope-Biessy/static/js/main.1eccab69.js.map",
+    "main.e9d0f4e7.js.map": "/Penelope-Biessy/static/js/main.e9d0f4e7.js.map",
     "453.8e0a7787.chunk.js.map": "/Penelope-Biessy/static/js/453.8e0a7787.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2c307d97.css",
-    "static/js/main.1eccab69.js"
+    "static/js/main.e9d0f4e7.js"
   ]
 }
