@@ -36,6 +36,49 @@ function AppContent() {
       <header className="p-6 bg-transparent">
         <nav className="container mx-auto flex justify-between items-center">
           <Link to="/" className="text-4xl font-light tracking-wide">Pénélope Biessy</Link>
+
+          {/* Burger Menu for Mobile */}
+          <div className="lg:hidden">
+            <button onClick={toggleMenu} className="text-white text-3xl">&#9776;</button>
+          </div>
+
+          {/* Overlay when the menu is open */}
+          {isOpen && <div className="menu-overlay fixed inset-0 bg-black bg-opacity-50" onClick={toggleMenu}></div>}
+
+          {/* Slide-out Menu */}
+          <div className={`fixed top-0 right-0 h-full w-64 bg-black text-white transform transition-transform ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+            <button onClick={toggleMenu} className="text-white text-3xl absolute top-4 right-4">&times;</button>
+            <div className="flex flex-col items-center justify-center h-full space-y-4">
+              <Link to={`/${lang}/narrative-designer`} onClick={toggleMenu} className="text-2xl">Narrative Designer</Link>
+              <Link to={`/${lang}/${lang === 'fr' ? 'dramaturge' : 'playwright'}`} onClick={toggleMenu} className="text-2xl">
+                {lang === 'fr' ? 'Dramaturge' : 'Playwright'}
+              </Link>
+              <Link to={`/${lang}/${lang === 'fr' ? 'repetitrice' : 'rehearsal-director'}`} onClick={toggleMenu} className="text-2xl">
+                {lang === 'fr' ? 'Répétitrice' : 'Rehearsal Director'}
+              </Link>
+              <Link to={`/${lang}/bio`} onClick={toggleMenu} className="text-2xl">Bio</Link>
+              <Link to="/contact" onClick={toggleMenu} className="text-2xl">Contact</Link>
+              <button onClick={toggleLanguage} className="text-2xl">
+                {lang === 'fr' ? 'EN' : 'FR'}
+              </button>
+            </div>
+          </div>
+
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex space-x-6">
+            <Link to={`/${lang}/narrative-designer`} className="hover:underline">Narrative Designer</Link>
+            <Link to={`/${lang}/${lang === 'fr' ? 'dramaturge' : 'playwright'}`} className="hover:underline">
+              {lang === 'fr' ? 'Dramaturge' : 'Playwright'}
+            </Link>
+            <Link to={`/${lang}/${lang === 'fr' ? 'repetitrice' : 'rehearsal-director'}`} className="hover:underline">
+              {lang === 'fr' ? 'Répétitrice' : 'Rehearsal Director'}
+            </Link>
+            <Link to={`/${lang}/bio`} className="hover:underline">Bio</Link>
+            <Link to="/contact" className="hover:underline">Contact</Link>
+            <button onClick={toggleLanguage} className="hover:underline">
+              {lang === 'fr' ? 'EN' : 'FR'}
+            </button>
+          </div>
         </nav>
       </header>
 
